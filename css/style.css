@@ -7,3 +7,15 @@ html {
 *:after {
   box-sizing: inherit;
 }
+
+html {
+  font-family: Montserrat;
+  font-style: regular;
+  font-size: 16px;
+}
+
+body {
+  background: #302140;
+  color: #fff;
+  min-height: 100vh;
+}
