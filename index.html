@@ -20,23 +20,23 @@
         </p>
       </header>
       <form class="form" action="https://dev.cotenfrontend.pl" method="post">
-        <h2>Enrolment form</h2>
-        <fieldset>
+        <h2 class="form__title">Enrolment form</h2>
+        <fieldset class="form__fieldset">
           <legend>MAIN PASSENGER</legend>
-          <p>
-            <label class="form__label" for="name">YOUR NAME</label>
+          <p class="form__item">
+            <label class="form__item-label" for="name">YOUR NAME</label>
             <input
-              class="form__item"
+              class="form__item-input"
               id="name"
               name="name"
               type="text"
               placeholder="Enter your full name"
             />
           </p>
-          <p>
-            <label class="form__label" for="age">YOUR AGE</label>
+          <p class="form__item">
+            <label class="form__item-label" for="age">YOUR AGE</label>
             <input
-              class="form__item form__item--range range--js"
+              class="form__item-input form__item-input--range range--js"
               id="age"
               name="age"
               type="range"
@@ -46,23 +46,26 @@
               value="18"
             />
           </p>
-          <p>
-            <label class="form__label" for="yourStory">YOUR MOTIVATION</label>
+          <p class="form__item">
+            <label class="form__item-label" for="yourStory"
+              >YOUR MOTIVATION</label
+            >
             <textarea
+              class="form__item-input form__item-input--textarea"
               id="yourStory"
               name="yourStory"
               placeholder="Briefly describe your motivation..."
             ></textarea>
           </p>
         </fieldset>
-        <fieldset>
+        <fieldset class="form__fieldset">
           <legend>OTHER PASSANGERS</legend>
-          <p>
-            <label class="form__label" for="adultNumber"
+          <p class="form__item">
+            <label class="form__item-label" for="adultNumber"
               >NUMBER OF ADULTS</label
             >
             <input
-              class="form__item"
+              class="form__item-input"
               id="adultNumber"
               name="adultNumber"
               type="number"
@@ -71,12 +74,12 @@
               value="0"
             />
           </p>
-          <p>
-            <label class="form__label" for="animalNumber"
+          <p class="form__item">
+            <label class="form__item-label" for="animalNumber"
               >NUMBER OF YOUR ANIMALS (INCLUDING KIDS)</label
             >
             <input
-              class="form__item"
+              class="form__item-input"
               id="animalNumber"
               name="animalNumber"
               type="number"
@@ -85,8 +88,8 @@
               value="0"
             />
           </p>
-          <p>
-            <label class="form__label" for="animalType"
+          <p class="form__item">
+            <label class="form__item-label" for="animalType"
               >PICK YOUR LARGEST ANIMAL</label
             >
             <select id="animalType">
@@ -104,20 +107,20 @@
         </fieldset>
         <fieldset class="form__fieldset">
           <legend>CONTACT</legend>
-          <p>
-            <label class="form__label">YOUR E-MAIL</label>
+          <p class="form__item">
+            <label class="form__item-label">YOUR E-MAIL</label>
             <input
-              class="form__item"
+              class="form__item-input"
               id="email"
               name="email"
               type="email"
               placeholder="Enter your e-mail"
             />
           </p>
-          <p>
-            <label class="form__label">YOUR PHONE NUMBER</label>
+          <p class="form__item">
+            <label class="form__item-label">YOUR PHONE NUMBER</label>
             <input
-              class="form__item"
+              class="form__item-input"
               id="phone"
               name="phone"
               type="tel"
@@ -127,84 +130,87 @@
         </fieldset>
         <fieldset class="form__fieldset">
           <legend>ADDRESS</legend>
-          <p>
-            <label class="form__label"
-              >STREET NAME
+          <p class="form__item">
+            <label class="form__item-label" for="streetName"
+              >STREET NAME</label>
               <input
-                class="form__item"
+                class="form__item-input"
                 id="streetName"
                 placeholder="Enter street name"
                 name="streetName"
               />
-            </label>
           </p>
-          <p>
-            <label class="form__label"
-              >POSTAL CODE
+          <p class="form__item">
+            <label class="form__item-label" for="postalCode">POSTAL CODE</label>
               <input
-                class="form__item"
+                class="form__item-input"
                 id="postalCode"
                 placeholder="Enter your postal code"
                 name="postaCode"
                 pattern="[0-9]{2}-[0-9]{3}"
               />
-            </label>
           </p>
-          <p>
-            <label class="form__label"
-              >CITY
+          <p class="form__item">
+            <label class="form__item-label" for="cityName">CITY</label>
+
               <input
-                class="form__item"
+                class="form__item-input"
                 id="cityName"
                 placeholder="Enter your city name"
                 name="cityName"
               />
-            </label>
           </p>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend>PICK YOUR MEAL PREFERENCE</legend>
-          <p>
+          <p class="form__item">
             <label
               ><input name="mealType" type="radio" value="carnivore" />I'm a
               declared carnivore</label
             >
           </p>
-          <p>
+          <p class="form__item">
             <label
               ><input name="mealType" type="radio" value="vegan" />I'm a vegan
               fanatic</label
             >
           </p>
-          <p>
+          <p class="form__item">
             <label
               ><input name="mealType" type="radio" value="beer" />Beer only diet
             </label>
           </p>
-          <p>
+          <p class="form__item">
             <label
               ><input name="mealType" type="radio" value="hermit" />Medeival
               hermit's diet</label
             >
           </p>
         </fieldset>
-        <fieldset>
+        <fieldset class="form__fieldset">
           <legend>ACKNOWLEDGEMENTS</legend>
-          <p>
+          <p class="form__item">
             <label
-              ><input name="consent-1" type="checkbox" required />I acknowledge
-              presented offer is one-way trip only.</label
+              ><input name="consent-1" type="checkbox" required /><span
+                class="form__item--acknowledgement"
+                >I acknowledge presented offer is one-way trip only.</span
+              ></label
             >
           </p>
-          <p>
+          <p class="form__item">
             <label
               ><input name="consent-2" type="checkbox" required />I acknowledge
               accommodation on target destination is not provided.</label
             >
           </p>
         </fieldset>
-        <p>
-          <input name="submit" type="submit" value="Enroll now!" />
+        <p class="form__item form__item--submit">
+          <input
+            class="form__submit"
+            name="submit"
+            type="submit"
+            value="Enroll now!"
+          />
         </p>
       </form>
       <footer class="footer">

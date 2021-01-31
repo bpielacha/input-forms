@@ -1,11 +1,19 @@
 :root {
-  --white: #f0e7e7;
+  --white: rgb(240, 231, 231);
+  --grey: #99857a;
+  --grey: rgb(137, 116, 104);
+  --grey: rgb(112, 98, 88);
   --brown: rgb(69, 24, 4);
-  --red: rgb(193, 68, 14);
+  --red-1: rgb(193, 68, 14);
+  --red-2: #9c2e35; /* mars red */
+  --red: #bc2732; /* mars red pantone */
   --orange: #e77d11;
   --yellow: #fda600;
   --red-10: rgba(193, 68, 14, 0);
   --brown-40: rgba(69, 24, 4, 0.4);
+  --white-50: rgba(240, 231, 231, 0.6);
+  --main-vertical-spacing: 128px;
+  --form-vertical-spacing: 32px;
 }
 
 html {
@@ -19,7 +27,7 @@ html {
 }
 
 html {
-  font-family: Montserrat;
+  font-family: Cabin;
   font-style: regular;
   font-size: 16px;
   color: #fff;
@@ -48,10 +56,12 @@ main {
   align-items: center;
   background: var(--brown-40);
   text-align: center;
+  margin-bottom: var(--main-vertical-spacing);
 }
 
 .header__title {
   font-family: "Lobster Two";
+  font-weight: normal;
   font-style: italic;
   font-size: 96px;
   color: var(--yellow);
@@ -60,13 +70,84 @@ main {
 
 .header__paragraph {
   max-width: 80%;
+  font-family: Cabin;
+  font-weight: bold;
   font-style: italic;
-  font-size: 18px;
+  font-size: 24px;
   margin: 0;
 }
 
-.form__label {
+.form {
+  max-width: 600px;
+  background: var(--white-50);
+  padding: 8px;
+  margin-bottom: var(--main-vertical-spacing);
+}
+
+@media (min-width: 601px) {
+  .form {
+    border-radius: 8px;
+  }
+}
+
+.form__title {
+  font-family: "Lobster Two";
+  font-style: italic;
+  font-size: 48px;
+  text-align: center;
+  color: var(--red);
+  margin: var(--form-vertical-spacing) 0;
+}
+
+.form__fieldset {
+  color: var(--grey);
+  border-radius: 8px;
+  border: 1px var(--grey) solid;
+  margin-bottom: var(--form-vertical-spacing);
+}
+
+.form__item {
+  margin: 16px 8px;
+}
+
+.form__item-label {
   display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.form__item-input {
+  width: 100%;
+  border:none;
+  border-radius: 8px;
+  padding:4px 8px;
+}
+
+.form__item-input--textarea {
+  height: 10em;
+}
+
+.form__item--acknowledgement {
+  /* change to ensure no wrapping under checkbox */
+  display: inline;
+}
+
+.form__item--submit {
+  text-align: center;
+}
+
+.form__submit {
+  font-family: "Lobster Two";
+  font-weight: normal;
+  font-style: italic;
+  font-size: 48px;
+  text-align: center;
+  color: var(--white);
+  background: var(--red);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-bottom: var(--form-vertical-spacing);
 }
 
 .footer {
