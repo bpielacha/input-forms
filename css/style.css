@@ -130,6 +130,10 @@ main {
   -moz-apperance: none; */
 }
 
+.form__item-output {
+  background: var(--white);
+}
+
 .form__item--textarea {
   height: 10em;
   resize: vertical;
