@@ -192,13 +192,14 @@ main {
   height: 10px;
   border-radius: 5px;
   background: var(--white-50);
+  cursor: pointer;
 }
 
 .range-output {
   grid-area: value;
   width: 50px;
-  height: 28
-px;  border: none;
+  height: 28 px;
+  border: none;
   border-radius: 8px;
   padding: 4px 8px;
   background: var(--white);
@@ -220,17 +221,19 @@ px;  border: none;
 }
 
 .radio {
+  cursor: pointer;
   appearance: none;
   -moz-appearance: none;
-	-webkit-appearance: none;
-	background-color: var(--white-50);
-	border: 1px solid var(--grey);
-	padding: 8px;
-	border-radius: 8px;
-	display: inline-block;
-  position: relative;
+  -webkit-appearance: none;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
   margin-right: 8px;
+  background-color: var(--white-50);
+  border: 1px solid var(--grey);
   vertical-align: bottom;
+  position: relative;
 }
 
 .radio:hover {
@@ -241,15 +244,51 @@ px;  border: none;
   background-color: var(--red);
 }
 
-/* .radio::after {
-  left: 2px;
-  top: 2px;
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
+.radio:checked::after {
+  position: absolute;
+  display: block;
+  height: 6px;
+  width: 6px;
+  border-radius: 4px;
+  top: 4px;
+  left: 4px;
   background: var(--white);
-  border: 1px var(--grey) solid;
-} */
+  content: "";
+}
+
+.checkbox {
+  cursor: pointer;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: inline-block;
+  background-color: var(--white-50);
+  border: 1px solid var(--grey);
+  box-shadow: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 4px;
+  margin-right: 8px;
+  vertical-align: bottom;
+  position: relative;
+}
+
+.checkbox:hover {
+  background-color: var(--white);
+}
+
+.checkbox:checked {
+  background-color: var(--red);
+}
+
+.checkbox:checked::after {
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  font-size: 12px;
+  color: var(--white);
+  content: "\2714";
+}
 
 .footer {
   width: 100%;
