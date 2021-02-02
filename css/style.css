@@ -219,6 +219,38 @@ px;  border: none;
   content: "";
 }
 
+.radio {
+  appearance: none;
+  -moz-appearance: none;
+	-webkit-appearance: none;
+	background-color: var(--white-50);
+	border: 1px solid var(--grey);
+	padding: 8px;
+	border-radius: 8px;
+	display: inline-block;
+  position: relative;
+  margin-right: 8px;
+  vertical-align: bottom;
+}
+
+.radio:hover {
+  background-color: var(--white);
+}
+
+.radio:checked {
+  background-color: var(--red);
+}
+
+/* .radio::after {
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background: var(--white);
+  border: 1px var(--grey) solid;
+} */
+
 .footer {
   width: 100%;
   padding: 4px;
