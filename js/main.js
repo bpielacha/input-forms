@@ -5,8 +5,8 @@ function setOutputValue (input, output) {
     output.innerHTML = input.value;
 }
 
-const rangeInput = document.querySelector('.range-input--js');
-const rangeOutput = document.querySelector('.range-output--js');
+const rangeInput = document.querySelector('.age-input--js');
+const rangeOutput = document.querySelector('.age-output--js');
 
 // set initital output value
 setOutputValue(rangeInput,rangeOutput);
