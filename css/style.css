@@ -81,7 +81,7 @@ main {
 .form {
   max-width: 500px;
   background: var(--white-50);
-  padding: 8px;
+  padding: 16px;
   margin-bottom: var(--main-vertical-spacing);
 }
 
