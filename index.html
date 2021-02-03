@@ -19,7 +19,8 @@
           Join us today on this one-of-a-kind experience!
         </p>
       </header>
-      <form class="form" action="https://dev.cotenfrontend.pl" method="post">
+      <!-- <form class="form" action="https://dev.cotenfrontend.pl" method="post"> -->
+      <form class="form" method="get">
         <h2 class="form__title">Enrolment form</h2>
         <fieldset class="form__fieldset">
           <legend>MAIN PASSENGER</legend>
@@ -34,7 +35,9 @@
             />
           </p>
           <p class="form__item form__item--range">
-            <label class="form__item-label form__item-label--range" for="age">YOUR AGE</label>
+            <label class="form__item-label form__item-label--range" for="age"
+              >YOUR AGE</label
+            >
             <span class="range-output age-output--js"></span>
             <input
               class="range-input age-input--js"
@@ -61,64 +64,66 @@
         </fieldset>
         <fieldset class="form__fieldset">
           <legend>OTHER PASSENGERS</legend>
-          <p class="form__item">
-            <label class="form__item-label" for="adultsNumber"
-              >NUMBER OF ADULTS</label
-            >
-            <input
-              class="number"
-              id="adultsNumber"
-              name="adultsNumber"
-              type="number"
-              min="0"
-              max="10"
-              value="0"
-            />
-          </p>
-          <p class="form__item">
-            <label class="form__item-label" for="childrenNumber"
-              >NUMBER OF YOUR KIDS</label
-            >
-            <input
-              class="number"
-              id="childrenNumber"
-              name="childrenNumber"
-              type="number"
-              min="0"
-              max="10"
-              value="0"
-            />
-          </p>
-          <p class="form__item">
-            <label class="form__item-label" for="animalsNumber"
-              >NUMBER OF YOUR ANIMALS</label
-            >
-            <input
-              class="number"
-              id="animalsNumber"
-              name="animalsNumber"
-              type="number"
-              min="0"
-              max="10"
-              value="0"
-            />
-          </p>
-          <p class="form__item">
-            <label class="form__item-label" for="animalType"
-              >PICK YOUR LARGEST ANIMAL</label
-            >
-            <select class="select" id="animalType" aria-placeholder="">
-              <option value="none">--pick--</option>
-              <option value="animal-1">Guinea Pig</option>
-              <option value="animal-2">Tortoise</option>
-              <option value="animal-3">Dog</option>
-              <option value="animal-4">Goat</option>
-              <option value="animal-5">Human Kid</option>
-              <option value="animal-6">Vietnameese Pig</option>
-              <option value="animal-7">Kakadu</option>
-              <option value="animal-8">Elephant</option>
-            </select>
-          </p>
+          <div class="form__wrapper-numbers">
+            <p class="form__item">
+              <label class="form__item-label" for="adultsNumber"
+                >NUMBER OF ADULTS</label
+              >
+              <input
+                class="number"
+                id="adultsNumber"
+                name="adultsNumber"
+                type="number"
+                min="0"
+                max="10"
+                value="0"
+              />
+            </p>
+            <p class="form__item">
+              <label class="form__item-label" for="childrenNumber"
+                >NUMBER OF KIDS</label
+              >
+              <input
+                class="number"
+                id="childrenNumber"
+                name="childrenNumber"
+                type="number"
+                min="0"
+                max="10"
+                value="0"
+              />
+            </p>
+            <p class="form__item">
+              <label class="form__item-label" for="animalsNumber"
+                >NUMBER OF ANIMALS</label
+              >
+              <input
+                class="number"
+                id="animalsNumber"
+                name="animalsNumber"
+                type="number"
+                min="0"
+                max="10"
+                value="0"
+              />
+            </p>
+            <p class="form__item">
+              <label class="form__item-label" for="animalType"
+                >PICK LARGEST ANIMAL</label
+              >
+              <select class="select" id="animalType" aria-placeholder="">
+                <option value="none">--pick--</option>
+                <option value="animal-1">Guinea Pig</option>
+                <option value="animal-2">Tortoise</option>
+                <option value="animal-3">Dog</option>
+                <option value="animal-4">Goat</option>
+                <option value="animal-5">Human Kid</option>
+                <option value="animal-6">Vietnameese Pig</option>
+                <option value="animal-7">Kakadu</option>
+                <option value="animal-8">Elephant</option>
+              </select>
+            </p>
+          </div>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend>CONTACT</legend>
@@ -178,43 +183,69 @@
         <fieldset class="form__fieldset">
           <legend>PICK YOUR MEAL PREFERENCE</legend>
           <p class="form__item">
-            <label
-              ><input class="radio" name="mealType" type="radio" value="carnivore" />I'm a
-              declared carnivore</label
+            <label class="form__item--clickbox"
+              ><input
+                class="radio"
+                name="mealType"
+                type="radio"
+                value="carnivore"
+              /><span>I'm a declared carnivore</span></label
             >
           </p>
           <p class="form__item">
-            <label
-              ><input class="radio" name="mealType" type="radio" value="vegan" />I'm a vegan
-              fanatic</label
+            <label class="form__item--clickbox"
+              ><input
+                class="radio"
+                name="mealType"
+                type="radio"
+                value="vegan"
+              /><span>I'm a vegan fanatic</span></label
             >
           </p>
           <p class="form__item">
-            <label
-              ><input class="radio" name="mealType" type="radio" value="beer" />Beer only diet
+            <label class="form__item--clickbox"
+              ><input
+                class="radio"
+                name="mealType"
+                type="radio"
+                value="beer"
+              /><span>Beer only diet</span>
             </label>
           </p>
           <p class="form__item">
-            <label
-              ><input class="radio" name="mealType" type="radio" value="hermit" />Medeival
-              hermit's diet</label
+            <label class="form__item--clickbox"
+              ><input
+                class="radio"
+                name="mealType"
+                type="radio"
+                value="hermit"
+              /><span>Medeival hermit's diet</span></label
             >
           </p>
         </fieldset>
         <fieldset class="form__fieldset">
           <legend>ACKNOWLEDGEMENTS</legend>
           <p class="form__item">
-            <label
-              ><input class="checkbox" name="consent-1" type="checkbox" required /><span
-                class="form__wrapper--acknowledgement"
+            <label class="form__item--clickbox"
+              ><input
+                class="checkbox"
+                name="consent-1"
+                type="checkbox"
+                required
+              /><span class="form__wrapper--acknowledgement"
                 >I acknowledge presented offer is one-way trip only.</span
               ></label
             >
           </p>
           <p class="form__item">
-            <label
-              ><input class="checkbox" name="consent-2" type="checkbox" required />I acknowledge
-              accommodation on target destination is not provided.</label
+            <label class="form__item--clickbox"
+              ><input
+                class="checkbox"
+                name="consent-2"
+                type="checkbox"
+                required
+              />I acknowledge accommodation on target destination is not
+              provided.</label
             >
           </p>
         </fieldset>
