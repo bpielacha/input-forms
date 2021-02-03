@@ -1,5 +1,5 @@
 :root {
-  --white: rgb(240, 231, 231);
+  --white: #f0e7e7;
   /* --grey-2: #99857a; */
   /* --grey-2-60: rgba(153, 133, 122, 0.7); */
   /* --grey-1: rgb(137, 116, 104); */
@@ -236,6 +236,19 @@ main {
 .number::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  display: inline-block;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color:var(--cherry);
+  background: var(--white);
 }
 
 .radio {

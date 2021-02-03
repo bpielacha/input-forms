@@ -62,13 +62,13 @@
         <fieldset class="form__fieldset">
           <legend>OTHER PASSENGERS</legend>
           <p class="form__item">
-            <label class="form__item-label" for="adultNumber"
+            <label class="form__item-label" for="adultsNumber"
               >NUMBER OF ADULTS</label
             >
             <input
               class="number"
-              id="adultNumber"
-              name="adultNumber"
+              id="adultsNumber"
+              name="adultsNumber"
               type="number"
               min="0"
               max="10"
@@ -76,13 +76,27 @@
             />
           </p>
           <p class="form__item">
-            <label class="form__item-label" for="animalNumber"
-              >NUMBER OF YOUR ANIMALS (INCLUDING KIDS)</label
+            <label class="form__item-label" for="childrenNumber"
+              >NUMBER OF YOUR KIDS</label
             >
             <input
               class="number"
-              id="animalNumber"
-              name="animalNumber"
+              id="childrenNumber"
+              name="childrenNumber"
+              type="number"
+              min="0"
+              max="10"
+              value="0"
+            />
+          </p>
+          <p class="form__item">
+            <label class="form__item-label" for="animalsNumber"
+              >NUMBER OF YOUR ANIMALS</label
+            >
+            <input
+              class="number"
+              id="animalsNumber"
+              name="animalsNumber"
               type="number"
               min="0"
               max="10"
@@ -93,8 +107,8 @@
             <label class="form__item-label" for="animalType"
               >PICK YOUR LARGEST ANIMAL</label
             >
-            <select id="animalType">
-              <option value="none">N/A</option>
+            <select class="select" id="animalType" aria-placeholder="">
+              <option value="none">--pick--</option>
               <option value="animal-1">Guinea Pig</option>
               <option value="animal-2">Tortoise</option>
               <option value="animal-3">Dog</option>
