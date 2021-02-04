@@ -7,8 +7,8 @@ Homework project to learn and test different input forms.
 - Styling non-text input types (like `number`, `range`, `checkboxes`, etc.) may is tricky and may require JS.
 - Input form element styling is highly dependant on web browser used.
 # Todo:
-- [x] Fix styling HTML for `checkbox` and `radio`. Is the `<span>` element needed inside `<label>`?
 - [ ] Test input validation and data types that are being sent
 - [ ] Need some general cleanup of HTML formatting and CSS classes
-- [ ] Add readonly mode to the dropdown list, when it's respectve number is 0
 - [ ] Create different types of inputs and post with `action="http://dev.cotenfrontend.pl"`
+- [x] Fix styling HTML for `checkbox` and `radio`. Is the `<span>` element needed inside `<label>`?
+- [x] Add disabled mode to the dropdown list, when it's respectve number is 0

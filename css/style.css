@@ -247,6 +247,11 @@ main {
   border: none;
   border-radius: 8px;
   padding: 4px 8px;
+  color: var(--grey);
+  background: var(--white-50);
+}
+
+.select--enabled {
   color: var(--cherry);
   background: var(--white);
   cursor: pointer;
