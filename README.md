@@ -8,7 +8,8 @@ Homework project to learn and test different input forms.
 - Input form element styling is highly dependant on web browser used.
 # Todo:
 - [ ] Test input validation and data types that are being sent
-- [ ] Need some general cleanup of HTML formatting and CSS classes
 - [ ] Create different types of inputs and post with `action="http://dev.cotenfrontend.pl"`
+- [ ] Add custom outline at `:focus`
+- [x] Need some general cleanup of HTML formatting and CSS classes
 - [x] Fix styling HTML for `checkbox` and `radio`. Is the `<span>` element needed inside `<label>`?
 - [x] Add disabled mode to the dropdown list, when it's respectve number is 0

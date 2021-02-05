@@ -1,17 +1,10 @@
 :root {
   --white: #f0e7e7;
-  /* --grey-2: #99857a; */
-  /* --grey-2-60: rgba(153, 133, 122, 0.7); */
-  /* --grey-1: rgb(137, 116, 104); */
   --grey: #706258;
-  --brown: #451804;
-  --cherry: #691a1a;
-  --red-1: rgb(193, 68, 14);
-  --red-2: #9c2e35; /* mars red */
   --red: #bc2732; /* mars red pantone */
-  --orange: #e77d11;
+  --cherry: #691a1a;
+  --brown: #451804;
   --yellow: #fda600;
-  --red-10: rgba(193, 68, 14, 0);
   --brown-40: rgba(69, 24, 4, 0.4);
   --white-50: rgba(240, 231, 231, 0.6);
   --main-vertical-spacing: 128px;
@@ -20,20 +13,18 @@
 
 html {
   box-sizing: border-box;
+  font-family: Cabin;
+  font-style: regular;
+  font-size: 16px;
+  color: var(--white);
 }
-
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-html {
-  font-family: Cabin;
-  font-style: regular;
-  font-size: 16px;
-  color: var(--white);
-}
+/* general layout styles */
 
 body {
   background: #302140;
@@ -92,6 +83,20 @@ main {
   }
 }
 
+.footer {
+  width: 100%;
+  padding: 4px;
+  font-size: 10px;
+  color: var(--white);
+}
+
+.footer__link {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* form elements */
+
 .form__title {
   font-family: "Lobster Two";
   font-style: italic;
@@ -147,26 +152,12 @@ main {
   align-self: center;
 }
 
-.form__wrapper--submit {
+.form__item-submit {
   text-align: center;
   margin: 0px;
 }
 
-.form__item-submit {
-  font-family: "Lobster Two";
-  font-weight: normal;
-  font-style: italic;
-  font-size: 48px;
-  text-align: center;
-  color: var(--white);
-  background: var(--red);
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-  margin-bottom: var(--form-vertical-spacing);
-}
-
-/* <input> styles classes */
+/* <input> element styles */
 
 .text-input {
   width: 100%;
@@ -325,14 +316,16 @@ main {
   content: "\2714";
 }
 
-.footer {
-  width: 100%;
-  padding: 4px;
-  font-size: 10px;
+.submit {
+  font-family: "Lobster Two";
+  font-weight: normal;
+  font-style: italic;
+  font-size: 48px;
+  text-align: center;
   color: var(--white);
-}
-
-.footer__link {
-  color: inherit;
-  text-decoration: none;
+  background: var(--red);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  margin-bottom: var(--form-vertical-spacing);
 }

@@ -1,6 +1,5 @@
-// const myRange = document.querySelector('.range--js');
-// console.log(myRange.value);
 
+// copy <input type="range"> value into the textbox output
 function setOutputValue (input, output) {
     output.innerHTML = input.value;
 }
@@ -12,12 +11,12 @@ const rangeOutput = document.querySelector('.age-output--js');
 setOutputValue(rangeInput,rangeOutput);
 
 // set output value on slide
-rangeInput.addEventListener("input", () => {
+rangeInput.addEventListener('input', () => {
     setOutputValue(rangeInput,rangeOutput);
   });
 
 
-  // readonly for animalType
+// enable/disable animalType <select> list
 const animalsNumber = document.querySelector('.animalsNumber--js');
 const animalType = document.querySelector('.animalType--js');
 
