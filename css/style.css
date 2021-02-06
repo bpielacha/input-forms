@@ -9,6 +9,7 @@
   --white-50: rgba(240, 231, 231, 0.6);
   --main-vertical-spacing: 128px;
   --form-vertical-spacing: 32px;
+  --border-radius: 8px;
 }
 
 html {
@@ -35,7 +36,6 @@ body {
 }
 
 main {
-  display: static;
   width: 100%;
 }
 
@@ -72,13 +72,13 @@ main {
 .form {
   max-width: 500px;
   background: var(--white-50);
-  padding: 16px;
+  padding: 4px 16px 8px 16px;
   margin-bottom: var(--main-vertical-spacing);
 }
 
 @media (min-width: 501px) {
   .form {
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     margin: 0 auto var(--main-vertical-spacing) auto;
   }
 }
@@ -108,10 +108,9 @@ main {
 
 .form__fieldset {
   color: var(--grey);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   border: 1px var(--grey) solid;
-  margin: 0;
-  margin-bottom: var(--form-vertical-spacing);
+  margin: 0 0 var(--form-vertical-spacing) 0;
 }
 
 .form__wrapper-numbers {
@@ -152,9 +151,9 @@ main {
   align-self: center;
 }
 
-.form__item-submit {
+.form__item--submit {
   text-align: center;
-  margin: 0px;
+  margin: 0 0 var(--form-vertical-spacing) 0;
 }
 
 /* <input> element styles */
@@ -162,7 +161,7 @@ main {
 .text-input {
   width: 100%;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 4px 8px;
   color: var(--cherry);
   background: var(--white);
@@ -192,7 +191,7 @@ main {
   width: 50px;
   height: 28 px;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 4px 8px;
   background: var(--white);
   color: var(--cherry);
@@ -217,7 +216,7 @@ main {
   appearance: textfield;
   width: 100%;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 4px 8px;
   color: var(--cherry);
   background: var(--white);
@@ -236,7 +235,7 @@ main {
   display: inline-block;
   width: 100%;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 4px 8px;
   color: var(--grey);
   background: var(--white-50);
@@ -248,30 +247,32 @@ main {
   cursor: pointer;
 }
 
-.radio {
+.clickbox {
   cursor: pointer;
   appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
-  display: inline-block;
+  display: block;
   width: 16px;
   height: 16px;
-  border-radius: 8px;
   background-color: var(--white-50);
   border: 1px solid var(--grey);
-  vertical-align: bottom;
   position: relative;
 }
 
-.radio:hover {
+.clickbox:hover {
   background-color: var(--white);
 }
 
-.radio:checked {
+.clickbox:checked {
   background-color: var(--red);
 }
 
-.radio:checked::after {
+.clickbox--radio {
+  border-radius: 8px;
+}
+
+.clickbox--radio:checked::after {
   position: absolute;
   display: block;
   height: 6px;
@@ -283,31 +284,11 @@ main {
   content: "";
 }
 
-.checkbox {
-  cursor: pointer;
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  display: inline-block;
-  background-color: var(--white-50);
-  border: 1px solid var(--grey);
-  box-shadow: none;
-  height: 16px;
-  width: 16px;
+.clickbox--checkbox {
   border-radius: 4px;
-  vertical-align: bottom;
-  position: relative;
 }
 
-.checkbox:hover {
-  background-color: var(--white);
-}
-
-.checkbox:checked {
-  background-color: var(--red);
-}
-
-.checkbox:checked::after {
+.clickbox--checkbox:checked::after {
   position: absolute;
   top: 0px;
   left: 2px;
@@ -325,7 +306,6 @@ main {
   color: var(--white);
   background: var(--red);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   padding: 8px 16px;
-  margin-bottom: var(--form-vertical-spacing);
 }
