@@ -10,6 +10,8 @@ Homework project to learn and test different input forms.
 - [ ] Test input validation and data types that are being sent
 - [ ] Create different types of inputs and post with `action="http://dev.cotenfrontend.pl"`
 - [ ] Add custom outline at `:focus`
+- [ ] Add hightlighing of required fields.
+- [ ] Disable submit button and enable only when consents are on.
 - [x] Some additional refactoring to simplify class definitions (e.g. merge `radio` and `checkbox` styles and add modificators)
 - [x] Some simple data validation added
 - [x] Need some general cleanup of HTML formatting and CSS classes
