@@ -1,19 +1,17 @@
 # Description:
 Homework project to learn and test different input forms.
 # Notes:
-- Task aimed more towards looking into various input types and their behavior rather than styling.
-- Some simple input boxes styling was performed (e.g. `number` inputs), just for sake of time.
-# Conlcusions:
-- Styling non-text input types (like `number`, `range`, `checkboxes`, etc.) may is tricky and may require JS.
+- Task originally aimed more towards looking into various input types and their behavior rather than styling.
+- Some simple input boxes styling was performed, just for sake of time. Inputs like `number`, `select` or `range` would require more effort (custom arrows, etc.)
+- Project was used also to excersise with grid, flex and styling in general (mobile first approach and simple reponsiveness).
+- JavaScript was used to add some interaction using `addEventListener`.
+# Conclusions:
+- Styling non-text input types (like `number`, `range`, `checkboxes`, etc.) may be tricky and complex.
 - Input form element styling is highly dependant on web browser used.
-# Todo:
-- [ ] Test input validation and data types that are being sent
-- [ ] Create different types of inputs and post with `action="http://dev.cotenfrontend.pl"`
+# Further Ideas:
 - [ ] Add custom outline at `:focus`
 - [ ] Add hightlighing of required fields.
 - [ ] Disable submit button and enable only when consents are on.
-- [x] Some additional refactoring to simplify class definitions (e.g. merge `radio` and `checkbox` styles and add modificators)
-- [x] Some simple data validation added
-- [x] Need some general cleanup of HTML formatting and CSS classes
-- [x] Fix styling HTML for `checkbox` and `radio`. Is the `<span>` element needed inside `<label>`?
-- [x] Add disabled mode to the dropdown list, when it's respectve number is 0
+- [ ] Definition of fonts can be probably done better and easier.
+# Screenshot:
+![Sample screenshot](screenshot.png)
